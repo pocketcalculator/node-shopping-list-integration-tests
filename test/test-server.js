@@ -111,7 +111,7 @@ describe('Shopping List', function() {
         // returning a promise and chaining with `then`, but we find
         // this approach cleaner and easier to read and reason about.
         return chai.request(app)
-          .put(`/recpies/${updateData.id}`)
+          .put(`/recipes/${updateData.id}`)
           .send(updateData);
       })
       // prove that the PUT request has right status code
