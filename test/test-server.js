@@ -97,7 +97,7 @@ describe('Shopping List', function() {
     // we can make a second, PUT call to the app.
     const updateData = {
       name: 'foo',
-      ingredients: ['bread', 'peanut butter'] 
+      ingredients: ['bread', 'peanut butter']
     };
 
     return chai.request(app)
@@ -117,10 +117,7 @@ describe('Shopping List', function() {
       // prove that the PUT request has right status code
       // and returns updated item
       .then(function(res) {
-        expect(res).to.have.status(200);
-        expect(res).to.be.json;
-        expect(res.body).to.be.a('object');
-        expect(res.body).to.deep.equal(updateData);
+        expect(res).to.have.status(204);
       });
   });
 
